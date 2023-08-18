@@ -11,7 +11,7 @@ import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
 // data imports
-import User from "./models/User.js";
+/* import User from "./models/User.js";
 import Product from "./models/Product.js";
 import ProductStat from "./models/ProductStat.js";
 import Transaction from "./models/Transaction.js";
@@ -25,7 +25,7 @@ import {
   dataOverallStat,
   dataAffiliateStat,
 } from "./data/index.js";
-
+ */
 /* CONFIGURATION */
 dotenv.config();
 const app = express();
@@ -44,7 +44,7 @@ app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
 
 /* MONGOOSE SETUP */
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT;
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
